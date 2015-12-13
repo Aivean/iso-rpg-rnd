@@ -1,16 +1,18 @@
 <% at("head") =
-    <link rel="stylesheet" type="text/css" href={publicUrl("css/iso-game.css")}/>
-    <link rel="stylesheet" type="text/css" media="all" href={webJarsUrl("bootstrap/3.3.5/css", "bootstrap.css",
-    "bootstrap.min.css")}/>
-    <script data-main={publicUrl("js/main.js")}
-        src={webJarsUrl("requirejs/2.1.22", "require.js", "require-min.js")}></script>
-    <script>
-        var assets = {scala.xml.Unparsed(xitrum.util.SeriDeseri.toJson(
-List(
-"three/atlas.png"
-).map(x => (x, publicUrl("assets/" + x))).toMap))};
-    </script>
-<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"></meta>
+<link rel="stylesheet" type="text/css" href={publicUrl("css/iso-game.css")}/>
+<link rel="stylesheet" type="text/css" media="all" href={webJarsUrl("bootstrap/3.3.5/css", "bootstrap.css",
+"bootstrap.min.css")}/>
 %>
 
-<div id="container"><br /><br /><br /><br /><br />Generating world...</div>
+<div class="container">
+<div class="row">
+<div class="col-md-6">
+<h1>Demos:</h1>
+<ul>
+    <li><a href="${url[com.aivean.isorpg.routes.GpuVisibility]}">GPU visibility
+    calculation test</a></li>
+    <li><a href="${url[com.aivean.isorpg.routes.BackendVisibility]}">Backend visibility test</a></li>
+</ul>
+</div>
+</div>
+</div>

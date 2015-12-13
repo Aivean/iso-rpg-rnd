@@ -1,0 +1,27 @@
+<%@ val title:Any = at.getOrElse("title", "Iso Game")%>
+<%@ val jsApp:Any = at.getOrElse("jsApp", "")%>
+<html>
+<head>
+<link rel="icon" type="image/png" sizes="32x32" href="${publicUrl("favicon-32x32.png")}">
+<link rel="icon" type="image/png" sizes="16x16" href="${publicUrl("favicon-16x16.png")}">
+
+<title>${title}</title>
+
+<link rel="stylesheet" type="text/css" href=${publicUrl("css/iso-game.css")}/>
+<link rel="stylesheet" type="text/css" media="all" href=${webJarsUrl("bootstrap/3.3.5/css", "bootstrap.css",
+    "bootstrap.min.css")}/>
+
+    #if ("" != jsApp)
+        <script data-main=${publicUrl("js/" + jsApp)}
+        src=${webJarsUrl("requirejs/2.1.22", "require.js", "require-min.js")}></script>
+    #end
+
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"/>
+
+    <%=unescape(at.getOrElse("head", ""))%>
+</head>
+<body>
+    <%=unescape(renderedView) %>
+    <%=jsForView%>
+</body>
+</html>

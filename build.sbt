@@ -37,6 +37,12 @@ libraryDependencies += "tv.cntt" %% "xitrum-scalate" % "2.5"
 // Archery
 libraryDependencies += "com.meetup" %% "archery" % "0.4.0"
 
+//libgdx
+libraryDependencies += "com.badlogicgames.gdx" % "gdx" % "1.7.1"
+
+//test
+libraryDependencies += "org.scalatest" % "scalatest_2.11" % "2.2.0" % "test"
+
 // Precompile Scalate templates
 seq(scalateSettings:_*)
 

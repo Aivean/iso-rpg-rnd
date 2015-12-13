@@ -4,7 +4,7 @@ define([
 		"three/FirstPersonControls",
 		"three/OrbitControls",
 		"./scene",
-		"./keyboard"
+		"../keyboard"
 	],
 	function (THREE, Detector, FirstPersonControls,
 			  OrbitControls, appScene, controls) {

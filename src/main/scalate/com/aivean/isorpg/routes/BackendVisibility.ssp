@@ -1,0 +1,12 @@
+<% at("head") =
+<script>
+var assets = {scala.xml.Unparsed(xitrum.util.SeriDeseri.toJson(
+List(
+"three/atlas.png"
+).map(x => (x, publicUrl("assets/" + x))).toMap))};
+    var faceData = {scala.xml.Unparsed(at.toJson("faceData"))}
+</script>
+%>
+
+<% at("jsApp") = "backend-visibility.js"%>
+<div id="container"><br /><br /><br /><br /><br />Generating world...</div>
